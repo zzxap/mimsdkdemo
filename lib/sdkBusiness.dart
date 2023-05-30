@@ -187,8 +187,6 @@ Future<void> initSdk() async {
   //copyFileToDocuments("libMIMSDK.a");
   dylib = NativeLibrary(_dylib);
 
-  //final lib = DynamicLibrary.open("F:\\flutter\\mimsdkFlutter\\build\\app\\intermediates\\merged_native_libs\\debug\\out\\lib\\x86_64\\godart.so");
- // final lib = DynamicLibrary.open("F:\\flutter\\mimsdkFlutter\\build\\app\\intermediates\\merged_native_libs\\debug\\out\\lib\\arm64-v8a\\godart.so");
   dylib.InitializeDartApi(ffi.NativeApi.initializeApiDLData)  ;
 
   var imei=await getUniqueId();
@@ -205,10 +203,10 @@ Future<void> initSdk() async {
   print("nativePort=");
   print(nativePort);
 
-  final appId =10000;
+  final appId =10000886;
   var jsonString = jsonEncode(config);
-  final sdkConfig = jsonString.toNativeUtf8().cast<ffi.Char>() ; //jsonString.toNativeUtf8();
-  var mode="release"; //开发环境用debug（仅限公司内部调试用） 生产环境用release
+  final sdkConfig = jsonString.toNativeUtf8().cast<ffi.Char>() ;
+  var mode="release";
 
   dylib.InitSDKWithFFI(appId, sdkConfig, nativePort,mode.toNativeUtf8().cast<ffi.Char>());
 
