@@ -12,7 +12,7 @@ class MethodChannelMimsdkdemo extends MimsdkdemoPlatform {
   @override
   Future<String?> getPlatformVersion() async {
     //在这里调用ffi
-   initSdk();
+    initSdk();
    getVerify("13699881000");
     final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;

@@ -23,9 +23,11 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 
 
 
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+
 typedef void (*OpenFunc)(char*,int);
 
 
