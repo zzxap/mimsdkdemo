@@ -16,7 +16,7 @@ A new Flutter plugin project.
   s.source           = { :path => '.' }
   s.public_header_files = 'Classes**/*.h'
   s.source_files = 'Classes/**/*'
-  s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'Classes/MIMSDK-Bridging-Header.h' }
+  #s.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => 'Classes/MIMSDK-Bridging-Header.h' }
   s.static_framework = true
   s.vendored_libraries = "**/*.a"
   s.dependency 'FlutterMacOS'
